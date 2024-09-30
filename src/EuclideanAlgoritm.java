@@ -5,14 +5,15 @@ public class EuclideanAlgoritm {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a first number: ");
         int a = sc.nextInt();
-        System.out.println("Enter a first number: ");
+        System.out.println("Enter a second number: ");
         int b = sc.nextInt();
         System.out.format("GCD of %d,%d is %d",a,b,calculateGCD(a,b));
     }
 
     private static int calculateGCD(int a, int b) {
+        int c;
         while (b != 0) {
-           int c = a % b;
+            c = a % b;
             a = b;
             b = c;
         }
